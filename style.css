@@ -102,4 +102,10 @@ body {
   color: white;
   opacity: 0;
   cursor: none;
+  transition: all 300ms ease-in-out;
+}
+
+.all-delete:hover {
+  color: yellow;
+  transform: scale(1.1) rotate(-30deg);
 }
