@@ -13,6 +13,7 @@ ul {
 button {
   border: none;
   background-color: transparent;
+  padding: 0;
 }
 
 body {
@@ -91,4 +92,14 @@ body {
   transform: translateY(25%);
   color: whitesmoke;
   background-color: black;
+}
+
+.all-delete {
+  font-size: 2rem;
+  position: fixed;
+  top: 8%;
+  right: 36%;
+  color: white;
+  opacity: 0;
+  cursor: none;
 }
