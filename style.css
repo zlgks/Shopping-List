@@ -100,12 +100,12 @@ body {
   top: 8%;
   right: 36%;
   color: white;
-  opacity: 0;
-  cursor: none;
   transition: all 300ms ease-in-out;
+  display: none;
 }
 
 .all-delete:hover {
   color: yellow;
   transform: scale(1.1) rotate(-30deg);
+  cursor: pointer;
 }

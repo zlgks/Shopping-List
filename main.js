@@ -1,8 +1,9 @@
 'use strict';
 
 const section = document.querySelector('.section');
+const form = document.querySelector('.footer__form');
 const input = document.querySelector('.footer__input');
-const addBtn = document.querySelector('.footer__button');
+const button = document.querySelector('.footer__button');
 const main = document.querySelector('.main');
 const allDeleteBtn = document.querySelector('.all-delete');
 
@@ -10,11 +11,9 @@ let count = 0;
 
 function allDeleteBtnView() {
     if(main.childElementCount > 0) {
-        allDeleteBtn.style.opacity = 1;
-        allDeleteBtn.style.cursor = "pointer";
+        allDeleteBtn.style.display = "block";
     } else {
-        allDeleteBtn.style.opacity = 0;
-        allDeleteBtn.style.cursor = "none";
+        allDeleteBtn.style.display = "none";
 
     }
 }
@@ -23,7 +22,6 @@ function addList() {
     if(input.value == '') {
         return;
     } else {
-        
         const item = addItem(input.value);
         main.append(item);
 
@@ -49,15 +47,11 @@ function addItem(inputValue) {
     }
 }
 
-addBtn.addEventListener('click', () => {
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
     addList();
 })
 
-input.addEventListener('keypress', (e) => {
-    if(e.key == 'Enter') {
-        addList();
-    }
-})
 
 section.addEventListener('click', (event)=> {
     const type = event.target.dataset.type;
